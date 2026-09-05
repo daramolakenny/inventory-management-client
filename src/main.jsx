@@ -12,6 +12,8 @@ import User from './pages/User.jsx'
 import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
 
+import Products from './components/product/Products.jsx'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +26,11 @@ createRoot(document.getElementById('root')).render(
       <Route path='/user' element={<User />} />
       <Route path='/admin' element={<Admin />} />
       <Route path='/manager' element={<Manager />} />
+
+      <Route path='/products' element={<Products />} />
+
+      <Route path='*' element={<h1>404 Not Found</h1>} />
+
     </Routes>
     </BrowserRouter>
   </StrictMode>,

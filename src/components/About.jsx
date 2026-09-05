@@ -4,8 +4,8 @@ import Features from './Features'
 const About = () => {
   return (
     <div>
-      <section id="about" className="px-16 py-16 bg-white" >
-        <div className="max-w-7xl mx-auto">
+      <section id="about" className="w-full px-4 sm:px-6 lg:px-10 py-16 bg-white" >
+        <div className="mx-auto w-full max-w-7xl">
 
           {/* Heading */}
           <div className="text-center mb-10">
@@ -28,7 +28,7 @@ const About = () => {
           <div className="md:flex md:items-center md:gap-12">
 
             {/* Text */}
-            <div className="md:w-1/2">
+            <div className="min-w-0 md:w-1/2">
               <p className="text-gray-700 leading-7 mb-4">
                 The system helps administrators, managers, and staff keep
                 track of stock levels, manage products, monitor inventory
@@ -44,14 +44,14 @@ const About = () => {
             </div>
 
             {/* Simple Dashboard Illustration */}
-            <div className="md:w-1/2 mt-10 md:mt-0">
+            <div className="min-w-0 md:w-1/2 mt-10 md:mt-0">
               <div className="rounded-xl bg-blue-50 p-6 shadow-sm">
 
                 <h3 className="text-xl font-bold text-gray-900 text-center mb-6">
                   INVENTORY MANAGEMENT
                 </h3>
 
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
                   <div className="bg-white rounded-lg p-4 text-center shadow-sm">
                     <h4 className="font-semibold text-blue-800">

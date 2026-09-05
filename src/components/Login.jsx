@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/login", {
+      const res = await fetch("http://localhost:3000/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,23 +39,23 @@ const Login = () => {
         });
       }
 
-      localStorage.setItem("token", data.accessToken);
+      localStorage.setItem("token", data.data.accessToken);
 
       Swal.fire({
         icon: "success",
         title: "Success",
         text: data.message,
       }).then(() => {
-        if (data.user.role === "admin") {
-          navigate("/adminpage");
+        if (data.data.user.role === "admin") {
+          navigate("/admin");
         } else {
-          navigate("/user");
+          navigate("/");
         }
       });
     } catch (error) {
       Swal.fire({
         icon: "error",
-        title: "Oops!",
+        title: error.name,
         text: error.message,
       });
     }

@@ -23,7 +23,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/register", {
+      const res = await fetch("http://localhost:3000/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const Signup = () => {
     } catch (error) {
       Swal.fire({
         icon: "error",
-        title: "Oops!",
+        title: error.name,
         text: error.message,
       });
     }
@@ -108,7 +108,6 @@ const Signup = () => {
           className="border p-2 rounded-md"
         >
           <option value="user">User</option>
-          {/* <option value="admin">Admin</option> */}
         </select>
 
         <button

@@ -6,7 +6,7 @@ import { features } from '../data'
 const Features = ({name, description}) => {
   return (
     <div>
-        <section id="features" className="p-16 bg-blue-50">
+        <section id="features" className="px-4 sm:px-6 lg:px-10 py-16 bg-blue-50">
           <div className="max-w-7xl mx-auto">
             {/* Heading */}
             <div className="text-center mb-10">

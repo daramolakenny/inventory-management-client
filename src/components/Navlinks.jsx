@@ -11,7 +11,7 @@ const Navlinks = () => {
   return (
     <div className='w-full'>
         {/* Navbar */}
-        <div className="relative z-50 flex w-full items-center justify-between rounded-xl bg-white/95 px-16 py-4 shadow-md backdrop-blur-sm">
+        <div className="relative z-50 flex w-full items-center justify-between rounded-xl bg-white/95 px-4 sm:px-6 lg:px-10 py-4 shadow-md backdrop-blur-sm">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -26,11 +26,11 @@ const Navlinks = () => {
 
         {/* Navigation */}
         <div>
-            <ul className={`lg:flex lg:flex-row space-x-6 cursor-pointer text-blue-800 ${openMenu ? 'flex flex-col absolute bg-blue-50 shadow-2xl rounded-lg transition hover:-translate-y-0.5 hover:text-blue-800 mt-12 px-10 text-blue-600 z-100' : 'hidden'} `}>
+            <ul className={`lg:flex lg:flex-row space-x-6 cursor-pointer text-blue-800 ${openMenu ? 'flex flex-col absolute right-0 bg-blue-50 shadow-2xl rounded-lg transition hover:-translate-y-0.5 hover:text-blue-800 mt-12 px-4 text-blue-600 z-50' : 'hidden'} `}>
                 {nav.map((item, id) => (
                     <li 
                         key={id}
-                        className='space-x-2 py-2 hover:bg-blue-200 rounded-sm p-2 mb-2'
+                        className='rounded-sm py-2 hover:bg-blue-200 px-2'
                     >
                         <a href={item.href}>{item.name}</a>
                     </li>
@@ -39,13 +39,13 @@ const Navlinks = () => {
             
             <div 
                 onClick={handleToggleMenu}
-                className='lg:hidden cursor-pointer text-blue-800 ml-16'
+                className='lg:hidden cursor-pointer text-blue-800 text-xl'
             >{openMenu ? '✕' : '☰'}</div>
         </div>
 
         {/* Login */}
         <Link to="/login">
-            <button className="rounded-md border border-blue-800 px-5 py-2 font-medium text-blue-800 transition duration-200 hover:bg-blue-800 hover:text-white">
+            <button className="rounded-md border border-blue-800 px-4 py-2 font-medium text-blue-800 transition duration-200 hover:bg-blue-800 hover:text-white sm:px-5">
             Login
             </button>
         </Link>

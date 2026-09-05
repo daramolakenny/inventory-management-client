@@ -5,7 +5,7 @@ import Navlinks from '../components/Navlinks'
 
 const Home = () => {
   return (
-    <div className=''>
+    <div className='w-full overflow-x-hidden'>
       <Navlinks />
       <Hero />
       <Footer />

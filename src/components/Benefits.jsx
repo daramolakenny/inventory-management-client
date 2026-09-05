@@ -24,7 +24,7 @@ const Card = ({ name, description }) => {
 const Benefits = () => {
   return (
     <div>
-      <section id="benefits" className="p-16 bg-white">
+      <section id="benefits" className="px-4 sm:px-6 lg:px-10 py-16 bg-white">
         <div className="max-w-7xl mx-auto">
 
           {/* Heading */}
